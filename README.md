@@ -1,2 +1,2 @@
 # GIT
-Repository For Common Git Commands
+Repository For Common Git Commands.
