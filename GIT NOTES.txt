@@ -1,0 +1,135 @@
+ ***************************************************************************************************/
+ * [TITLE]: GIT COMMANDS
+ * 
+ * [DESCRIPTION]: Some common commands used in Git
+ *
+ * [FILE AUTHOR]: Ahmed Hassan
+ *
+ ***************************************************************************************************/
+ 
+# sets up Git with your name
+git config --global user.name "<Your-Full-Name>"
+
+# sets up Git with your email
+git config --global user.email "<your-email-address>"
+
+# makes sure that Git output is colored
+git config --global color.ui auto
+
+# displays the original state in a conflict
+git config --global merge.conflictstyle diff3
+
+# displays the user information
+git config --list
+
+----------------------------------------------------------------------------------------------------
+
+# create a new, empty repository in the current directory
+git init
+
+# create an identical copy of an existing repository with the same name 
+git clone <URL>
+
+# create an identical copy of an existing repository with a new name
+git clone <URL> new project name
+
+# knows the Git repository status
+git status
+
+# display all of the commits of a repository, Q for quit and Space for Scroll, <SHA> for certain commit
+# 1. (-n for limited numbers of commits)
+# 2. (--oneline to get each commit in a single line)
+# 3. (--stat to display the file(s)/line(s) that have been modified)
+# 4. (-p to display the files that have been modified, displays the actual changes that have been made)
+# 5. (--decorate to display the tags)
+git log
+
+# display all commits of a repository in details
+git reflog
+
+# display only one commit of a repository, Q for quit and Space for Scroll, <SHA> for specific commit
+git show 
+
+----------------------------------------------------------------------------------------------------
+
+# move files from the Working Directory to the Staging Index, use period (.) to add the current directory
+# (and all nested files)
+git add <File1> <File2> ... <FileN>
+
+# takes files from the Staging Index and saves them in the repository, use -m (to add a message)
+git commit
+
+# see changes that have been made but haven't been committed yet
+git diff
+
+----------------------------------------------------------------------------------------------------
+
+# add a marker on a specific commit; the tag does not move around as new commits are added
+# 1. (-a <TAG NAME> to add a tag to the most recent commit)
+# 2. (-a <TAG NAME> <SHA> to add a tag to a specific commit if a SHA is passed)
+# 3. (-d <TAG NAME> to delete a specific tag)
+# 4. (used to display the tags)
+git tag
+
+# manage branches in Git
+# 1. (<BRANCH NAME> to create a new branch)
+# 2. (-d <BRANCH NAME> to delete the branch only if all changes are merged)
+# 3. (-D <BRANCH NAME> to delete the branch even if there are unmerged changes)
+# 4. (-m <BRANCH NAME> to rename the current branch to <NEW BRANCH NAME>)
+# 5. (-a list all remote branches)
+# 6. (used to list the branches)
+git branch
+
+# swicth between the current branch to this branch
+git checkout <BRANCH NAME> 
+
+# create a new branch and switch to it
+git checkout -b <BRANCH NAME>
+
+# display all of the branches in the repository
+git log --oneline --graph --decorate --all
+
+# combine branches in Git
+git merge <BRANCH NAME>
+
+----------------------------------------------------------------------------------------------------
+
+# change the commit message/add missed files to the commit
+git commit --amend
+
+# reverse a previously made commit/undo the changes that were made by the previous commit
+git revert <COMMIT SHA>
+
+# move the HEAD and current branch pointer to the referenced commit
+# 1. (--mixed to unstage committed changes)
+# 2. (--soft to move committed changes to the staging index)
+# 3. (--hard to erase commits)
+git reset <REFERNCE TO COMMIT>
+
+# create a backup branch on the most-recent commit so that I can get back to the commits if I make a mistake
+git branch backup
+
+# unstage the files from the staging Index
+git restore --staged <FILE NAME>
+
+----------------------------------------------------------------------------------------------------
+
+# push the commits in the remote repository
+git push <REMOTE> <BRANCH NAME>
+
+# pull the project files from the remote repository
+git pull <REMOTE> <BRANCH NAME>
+
+----------------------------------------------------------------------------------------------------
+
+^     –> indicate the parent commit
+~     –> indicate the first parent commit
+ls    -> used to list files and directories
+mkdir -> used to create a new directory
+cd    -> used to change directories
+pwd   -> used to print the current directory
+rm    -> used to remove files
+rmdir -> used to remove directories
+exit  -> used to exit from the terminal
+
+----------------------------------------------------------------------------------------------------
