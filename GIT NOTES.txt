@@ -57,7 +57,8 @@ git show
 # (and all nested files)
 git add <File1> <File2> ... <FileN>
 
-# takes files from the Staging Index and saves them in the repository, use -m (to add a message)
+# takes files from the Staging Index and saves them in the repository, use -m "MESSAGE" (to add a message)
+# ,use -am "MESSAGE" (to add message and commit in the same line) 
 git commit
 
 # see changes that have been made but haven't been committed yet
@@ -81,6 +82,16 @@ git tag
 # 6. (used to list the branches)
 git branch
 
+# stash files from the working directory
+# 1. (save <MESSAGE> to stash file with a messages)
+# 1. (list to list the stashed files)
+# 2. (apply to return to work with the stashed file)
+# 3. (show to display the modification in the file)
+# 4. (drop to drop the stashed file)
+# 5. (clear to clear the stash list)
+# 6. (pop to unstash the file and remove it from the list)
+git stash
+
 # swicth between the current branch to this branch
 git checkout <BRANCH NAME> 
 
@@ -90,7 +101,7 @@ git checkout -b <BRANCH NAME>
 # display all of the branches in the repository
 git log --oneline --graph --decorate --all
 
-# combine branches in Git
+# combine branches in Git, -m "MESSAGE" to display the merge message
 git merge <BRANCH NAME>
 
 ----------------------------------------------------------------------------------------------------
@@ -123,14 +134,15 @@ git pull <REMOTE> <BRANCH NAME>
 
 ----------------------------------------------------------------------------------------------------
 
-^     –> indicate the parent commit
-~     –> indicate the first parent commit
-ls    -> used to list files and directories
-mkdir -> used to create a new directory
-cd    -> used to change directories
-pwd   -> used to print the current directory
-rm    -> used to remove files
-rmdir -> used to remove directories
-exit  -> used to exit from the terminal
+^     	–> indicate the parent commit
+~     	–> indicate the first parent commit
+ls    	-> used to list files and directories
+ls -al	-> List all possible files 
+mkdir 	-> used to create a new directory
+cd    	-> used to change directories
+pwd   	-> used to print the current directory
+rm    	-> used to remove files
+rmdir 	-> used to remove directories
+exit  	-> used to exit from the terminal
 
 ----------------------------------------------------------------------------------------------------
